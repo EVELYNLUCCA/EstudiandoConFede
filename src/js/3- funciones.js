@@ -1,32 +1,28 @@
-function escribirNums(cantidad){
-    for (let i = 1; i <= cantidad; i++) {
-        console.log(i);
-    }
-}
-
 function saludar(nombre){
-    console.log(`Hola ${nombre}`)
+    console.log(`Hola ${nombre}`);
 }
-
-escribirNums();
-saludar('Ana');
-
-/* ------------------------------------------------------------------------ */
 
 const saludarFlecha = (nombre) => {
-    console.log(`Hola ${nombre}`)
+    console.log('Hola', nombre);
+    console.log('Chau', nombre);
 }
 
-saludarFlecha('Anto');
+saludarFlecha('Facundo');
+saludarFlecha('Facundito');
+saludarFlecha('Pepito');
+saludarFlecha('Norita');
 
-/* ----------------------------------------------------------------------- */
+// /* ----------------------------------------------------------------------- */
 
 function sumar(num1, num2){
-    return num1 + num2;
+    const resultado = num1 + num2;
+
+    return resultado;
 }
 
-const sumar2 = (num1, num2) => num1 + num2 
+const suma5 = sumar(5, 5);
+const suma10 = sumar(10, 10);
 
-console.log(sumar2(6,5));
+console.log(suma10);
 
 /* ----------------------------------------------------------------------- */
