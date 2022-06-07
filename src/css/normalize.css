@@ -1,0 +1,21 @@
+.hola{
+    transition: all 1s;
+    width: 50px;
+    height: 20px;
+}
+
+.padre{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.hijo {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
