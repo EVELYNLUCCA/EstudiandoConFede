@@ -8,36 +8,15 @@ const data = {
 };
 
 axios.post('https://jsonplaceholder.typicode.com/posts', data)
-    .then((res) => { console.log(res.data) })
+    .then(res => console.log(res.data) )
     .catch(error => console.log(error));
 
 
 /* -------------------------------------------------- */
 
-async function renderUsers(){
-    let users;
+/* GET */
+/* axios es una librería externa y hay que importarla en el html. */
 
-    axios.get('https://jsonplaceholder.typicode.com/users')
-    .then( function(res) {
-        users = res.data;
-    } )
-    .catch( error => console.log(error) );
-
-    setTimeout(() => {
-            const container = document.querySelector('.container');
-
-            users.forEach(element => {
-            const userCard = `
-                <div class="card">
-                    <p>${element.name}</p>
-                    <p>${element.email}</p>
-                    <p>${element.phone}</p>
-                </div>
-            `;
-        
-            container.innerHTML = container.innerHTML + userCard;
-        });
-    }, 5000);
-}
-
-renderUsers();
+axios.get('https://jsonplaceholder.typicode.com/users')
+.then( (res) => console.log(res.data) )
+.catch( error => console.log(error) );
