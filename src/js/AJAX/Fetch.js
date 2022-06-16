@@ -19,12 +19,34 @@ fetch('GET', 'https://jsonplaceholder.typicode.com/users')
     .catch(error => console.log(error));
 
 
+fetch("https://ovdev-portfolio.herokuapp.com/api/tecnologies", 
+{
+    method: 'POST',
+    body: JSON.stringify(objeto)
+}
+)
+.then((res)=>console.log(res))
+.catch((error)=> console.log(error));
+
+fetch('https://ovdev-portfolio.herokuapp.com/api/tecnologies',
+{
+    method: 'PUT',
+    body: JSON.stringify(objeto)
+})
+.then((res) => console.log(res))
+.catch((error) => console.log(error));
+
+fetch('https://ovdev-portfolio.herokuapp.com/api/tecnologies',
+{
+    method: 'DELETE',
+    body: JSON.stringify(objeto)
+})
+.then((res) => console.log(res))
+.catch((error) => console.log(error));
 
 
 
 
-
-    
 /* el async desbloquea el await */
 // const getData = async (url) => {
 //     const response = await fetch(url);
